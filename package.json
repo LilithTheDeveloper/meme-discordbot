@@ -1,0 +1,28 @@
+{
+  "name": "meme-discordbot",
+  "version": "1.0.0",
+  "description": "A meme bot to meme the best",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index --ignore 'config/*.json'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LilithTheSuccubus/meme-discordbot.git"
+  },
+  "keywords": [
+    "meme"
+  ],
+  "author": "Lilith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LilithTheSuccubus/meme-discordbot/issues"
+  },
+  "homepage": "https://github.com/LilithTheSuccubus/meme-discordbot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "nodemon": "^2.0.4",
+    "snekfetch": "^4.0.4"
+  }
+}

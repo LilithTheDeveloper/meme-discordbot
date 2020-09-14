@@ -1,2 +1,2 @@
 # meme-discordbot
-A discord bot that gives you memes, anymore questions?
+It's a meme bot, give it a list of subreddits and post stuff from subs
