@@ -12,14 +12,19 @@ module.exports = {
 		var subredditsJSON = fs.readFileSync(subredditsPath);
         subredditsJSON = JSON.parse(subredditsJSON);
         subs = subredditsJSON.subreddits;
-        var answ = `**Available Subreddits:**\n`;
-        for(var i = 0; i < subs.length; i++){
-            answ += ` - ${subs[i].name} | NSFW: ${subs[i].isSFW ? 'No' : 'Yes'} | Tags: `;
-            for(var j = 0; j < subs[i].tags.length; j++){
-                answ += `${subs[i].tags[j]} `;
+        if(subs.length > 0) {
+            var answ = `**Available Subreddits:**\n`;
+            for(var i = 0; i < subs.length; i++){
+                answ += ` - ${subs[i].name} | NSFW: ${subs[i].isSFW ? 'No' : 'Yes'} | Tags: `;
+                for(var j = 0; j < subs[i].tags.length; j++){
+                    answ += `${subs[i].tags[j]} `;
+                }
+                answ += `\n`;
             }
-            answ += `\n`;
-        }
         message.channel.send(answ);
+        }
+        else{
+            message.channel.send("There are currently no subreddits available.\nConsider adding some with !add");
+        }
     },
 };
