@@ -74,8 +74,6 @@ exports.specificMeme = async (message, args) => {
 };
 
 exports.add = async (message, args) => {
-  console.log(message);
-
   //Name of the subreddit
   var sub = args[1];
 
